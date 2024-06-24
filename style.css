@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: aliceblue;
+  --accent-color: rgb(113, 0, 150);
+  --hidden-color: grey;
+}
+
+::selection {
+  color: black;
+  background-color: white;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  color: var(--main-color);
+  z-index: 2;
+}
+
+.nav-links {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.3s ease-out;
+}
+
+.nav-links a:hover {
+  background-color: var(--main-color);
+  color: black;
+}
+
+.nav-link.active {
+  color: white;
+  border: 1px solid white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo h1 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 25px;
+  color: aliceblue;
+}
+
+.logo img {
+  filter: invert(100%);
+  width: 30px;
+}
+
+.hero {
+  position: relative;
+  margin-top: -129px;
+  height: 110vh;
+  color: var(--main-color);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/stars.jpg);
+  background-size: 1000px;
+  z-index: -1;
+  animation: scaleAnimation 60s linear infinite;
+  transform: scale(1.1);
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+.earth {
+  position: absolute;
+  top: 10%;
+  right: -40%;
+  width: 125%;
+  min-width: 300px;
+  z-index: -1;
+  animation: rotateAnimation 360s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  left: 100px;
+  top: 200px;
+  max-width: 1000px;
+  gap: 50px;
+}
+
+.title-container h1 {
+  font: normal 500 80px "Noto Serif Display", serif;
+  color: white;
+  margin-bottom: -50px;
+}
+.title-container h2 {
+  font: normal 500 90px "Cairo", sans-serif;
+  color: white;
+  margin: 0 50px -40px 0;
+
+  align-self: center;
+}
+
+.title-container p {
+  line-height: 1.5;
+  color: inherit;
+  font-size: 19px;
+  text-indent: 20px;
+  width: 65%;
+  color: var(--hidden-color);
+  transition: color 0.5s, font-size 0.3s, text-indent 0.3s, transform 1s;
+  cursor: default;
+}
+
+.title-container p:hover {
+  color: var(--main-color);
+  font-size: 20px;
+  transform: translate(12px, 0px);
+  text-indent: 0px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  background-color: aliceblue;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.title-container .btn:hover {
+  text-decoration: none;
+  background: transparent;
+  outline: 1px solid var(--main-color);
+  filter: invert(100%);
+}
+
+.arrow {
+  padding-top: 5px;
+  width: 20px;
+}
+
+.statistics {
+  position: relative;
+  z-index: 1;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  background-image: url(assets/floating.jpg);
+  background-color: rgb(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.statistics h2 {
+  margin: 30px;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  top: 50px;
+  min-width: 1000px;
+  font: normal 500 80px "Noto Serif Display", serif;
+  color: white;
+}
+
+.card-container {
+  margin: 300px 10% 100px 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10%;
+  color: aliceblue;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  gap: 40px;
+  color: white;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  filter: brightness(100%);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.card .btn {
+  /* width: 150px; */
+  align-self: flex-start;
+}
+
+.card .btn:hover {
+  text-decoration: none;
+  background: transparent;
+  outline: 1px solid var(--main-color);
+  filter: invert(100%);
+}
+
+.card .arrow {
+  width: 20px;
+}
+
+.about-me {
+  height: 150vh;
+  color: aliceblue;
+  background-color: black;
+}
