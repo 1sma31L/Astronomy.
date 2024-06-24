@@ -207,8 +207,8 @@ header {
 .statistics {
   position: relative;
   z-index: 1;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
   background-image: url(assets/floating.jpg);
   background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: overlay;
@@ -289,7 +289,106 @@ header {
 }
 
 .about-me {
-  height: 150vh;
+  border-top: 5px solid white ;
+  position: relative;
+  border-top: 1px solid white;
+  height: 100vh;
   color: aliceblue;
   background-color: black;
+  background-image: url(assets/astro.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*  */
+
+.about-me-container {
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px;
+  gap: 80px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 50px;
+  color: black;
+  width: 80%;
+  flex: 1;
+  box-shadow: 2px 2px 30px 20px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%) translateY(50%);
+  transition: transform 0.5s;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.about-me-container:hover {
+  transform: translateX(-50%) translateY(50%) scale(1.01);
+}
+
+.information-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.information-container h1 {
+  font: normal 500 60px "Noto Serif Display", serif;
+  color: black;
+}
+
+.about-me-container h2 {
+  font: normal 600 30px "Noto Serif Display", serif;
+  color: #9a4f23;
+}
+
+.about-me-container .my-image {
+  width: 400px;
+  border-radius: 20px;
+}
+
+.about-me-container p {
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 300;
+  cursor: default;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+
+.social-media-container img {
+  width: 30px;
+  transition: 0.2s;
+}
+
+.social-media-container img:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  border-top: 2px solid white;
+  background-color: black;
+  height: 8vh;
+}
+footer p {
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  gap: 5px;
+}
+.astronomy {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 500;
 }
