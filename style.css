@@ -124,7 +124,8 @@ header {
   width: 125%;
   min-width: 300px;
   z-index: -1;
-  animation: rotateAnimation 360s linear infinite;
+  animation: rotateAnimation 240s ease-in infinite;
+  animation-delay: 3s;
 }
 
 @keyframes rotateAnimation {
