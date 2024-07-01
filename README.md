@@ -1,10 +1,14 @@
 # Astronomy
 
 A visually appealing webpage project that explores various aspects of astronomy. This page includes a header with navigation links, a main section with cosmic statistics, an about me section, and a footer.
-
+## Preview
+ ![](assets/1.png)
+ ![](assets/2.png)
+ ![](assets/3.png)
 ## Table of Contents
 
 - [Astronomy](#astronomy)
+  - [Preview](#preview)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Features](#features)
